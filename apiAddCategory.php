@@ -85,7 +85,7 @@ if (isset($_POST['update_category'])) {
 }
 
 ///////delete category
-$con = mysqli_connect("localhost", "root", "himalayan", "project");
+$con = mysqli_connect("localhost", "root", "", "project");
 if (isset($_POST['delete_category'])) {
     $category_id = mysqli_real_escape_string($con, $_POST['category_id']);
     $select_query = "SELECT * FROM category WHERE id = '$category_id'"; //Deleting image
